@@ -7,8 +7,8 @@ const pushNotification = (posTop, posRight, title, description, type) => {
   notification.className = `notification ${type}`;
   notification.style.top = `${posTop}px`;
   notification.style.right = `${posRight}px`;
-
-  // notification.style.boxSizing = 'content-box';
+  notification.style.position = 'fixed';
+  notification.style.boxSizing = 'content-box';
 
   const notificationTitle = document.createElement('h2');
 
@@ -26,7 +26,7 @@ const pushNotification = (posTop, posRight, title, description, type) => {
 
   setTimeout(() => {
     notification.style.display = 'none';
-  }, 2200);
+  }, 2000);
 };
 
 pushNotification(
